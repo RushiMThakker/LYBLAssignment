@@ -18,27 +18,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class AppConfig {
-    /**
-     * A method for swagger app related configuration
-     *
-     * @param appDescription a string contains the description about the application
-     * @param appVersion a string contains the app version information
-     * @return an object of class OpenAPI
-     */
-    @Bean
-    public OpenAPI customOpenAPI(
-            @Value("${application-description}") String appDescription,
-            @Value("${application-version}") String appVersion) {
-        return new OpenAPI()
-                .info(
-                        new Info()
-                                .title("Loan Engine API")
-                                .version(appVersion)
-                                .description(appDescription)
-                                .termsOfService("http://swagger.io/terms/")
-                                .license(new License().name("Apache 2.0").url("http://springdoc.org")));
-    }
-
     @PostConstruct
     public void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
@@ -73,8 +52,4 @@ public class AppConfig {
      *
      * @return
      */
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 }
