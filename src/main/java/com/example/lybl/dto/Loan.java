@@ -13,8 +13,8 @@ public class Loan {
     @JsonProperty("tenure")
     private Integer tenure;
 
-    @JsonProperty("EMI")
-    private Float EMI;
+    @JsonProperty("emi")
+    private Double emi;
 
 
     public Integer getTenure() {
@@ -41,11 +41,11 @@ public class Loan {
         this.amount = amount;
     }
 
-    public Float getEMI() {
-        return EMI;
+    public Double getEmi() {
+        return emi;
     }
 
-    public void setEMI(Float EMI) {
-        this.EMI = EMI;
+    public void setEmi(Double emi) {
+        this.emi = emi;
     }
 }

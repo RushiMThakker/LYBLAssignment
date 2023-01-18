@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 @RequestMapping("/loan")
 public class LoanController {
@@ -24,7 +27,7 @@ public class LoanController {
     @PostMapping(
             value = "/value",
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    public @ResponseBody Loan getLoanAmount(
+    public @ResponseBody List<Loan> getLoanAmount(
             @Parameter(description = "Facts defining the current economics of person affecting loan amount", example = "credit_cards, existing_loans")
             @RequestBody Facts facts) {
         return loanService.getEligibleLoans(facts);

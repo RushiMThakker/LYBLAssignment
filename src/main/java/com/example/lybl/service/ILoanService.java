@@ -3,6 +3,8 @@ package com.example.lybl.service;
 import com.example.lybl.dto.Facts;
 import com.example.lybl.dto.Loan;
 
+import java.util.ArrayList;
+
 public interface ILoanService {
-    Loan getEligibleLoans(Facts facts);
+    ArrayList<Loan> getEligibleLoans(Facts facts);
 }

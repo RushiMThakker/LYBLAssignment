@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 
 public class Facts {
-
     @JsonProperty("cibil_score")
     private Integer cibilScore;
 
@@ -17,4 +16,20 @@ public class Facts {
 
     @JsonProperty("salary")
     private Integer salary;
+
+    public Integer getCibilScore() {
+        return cibilScore;
+    }
+
+    public Integer getCreditCards() {
+        return creditCards;
+    }
+
+    public ArrayList<Loan> getLoans() {
+        return loans;
+    }
+
+    public Integer getSalary() {
+        return salary;
+    }
 }
