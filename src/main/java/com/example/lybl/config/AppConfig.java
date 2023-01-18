@@ -18,38 +18,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class AppConfig {
-
-    /**
-     * A method to create a bean of ResourceBundleMessageSource to which will be used to get the
-     * messages from the properties file based on the passed labels
-     *
-     * @return an object of class ResourceBundleMessageSource
-     */
-//    @Bean
-//    public ResourceBundleMessageSource messageSource() {
-//        ResourceBundleMessageSource source = new ResourceBundleMessageSource();
-//        source.setBasenames("properties/labels");
-//        source.setUseCodeAsDefaultMessage(true);
-//        return source;
-//    }
-
-    /**
-     * A method to create a bean of LocalValidatorFactoryBean which will be used to generate
-     * validation messages based on the label mentioned in the properties file
-     *
-     * @return an object of class LocalValidatorFactoryBean
-     */
-//    @Bean
-//    public LocalValidatorFactoryBean getValidator() {
-//        var source = new ResourceBundleMessageSource();
-//        source.setBasenames("properties/validation-labels");
-//        source.setUseCodeAsDefaultMessage(true);
-//
-//        LocalValidatorFactoryBean bean = new LocalValidatorFactoryBean();
-//        bean.setValidationMessageSource(source);
-//        return bean;
-//    }
-
     /**
      * A method for swagger app related configuration
      *
